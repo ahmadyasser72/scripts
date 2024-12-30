@@ -30,7 +30,7 @@ jobs:
 
     - name: Run Maven downloader script
       run: |
-        python ./maven_downloader.py "${{ github.event.inputs.maven_url }}"
+        python ./maven_downloader.py ${{ github.event.inputs.maven_url }}
 
     - name: Upload dependencies as artifact
       uses: actions/upload-artifact@v4
