@@ -59,7 +59,7 @@ def download_dependencies(pom_dir):
     try:
         # Run Maven command to download dependencies 
         result = subprocess.run(
-            ["mvn.cmd", "dependency:copy-dependencies", "-DoutputDirectory=dependencies"],
+            ["mvn", "dependency:copy-dependencies", "-DoutputDirectory=dependencies"],
             cwd=pom_dir,
             check=True,
             text=True,
